@@ -1,37 +1,31 @@
-## Welcome to GitHub Pages
+## Swift 3.0 - курс във ФМИ 
 
-You can use the [editor on GitHub](https://github.com/heitara/swift-3/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+Курсът по Swift ще започне през летният семестър на учебната 2016/2017. Целта на курса е да запознае учащите с основите на езика. Предимствата, разликите и разлините приложения на езика. След приключването на курса, студентеите ще могат да създават базови Swift приложения, които да могат да бъдат стартирани на различни устройства.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+### Въпроси и отговори
 
-### Markdown
+Ще се занимаваме ли с разработката на приложения за iOS, tvOS, macOS, watchOS?
+- Целта на курса е да представи езика, който може да бъде изпозлван за разработване на приложения за изброените платформи, но няма да изпадаме в детайли, свързани със конкретна платформа. Курсът е базов и ще последват други курсове, които ще надграждат над него.
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+Възможно ли е да разработвам приложения на дрги операционни системи освен macОS?
+- Да. Swift 3 e отворена технология и не е ограничена само да една операционна система.
 
-```markdown
-Syntax highlighted code block
+Коя среда за разработка да използвам?
+- Зависи от предпочитанията ви. Ето няколко хубави примера:
+1. [xCode](https://developer.apple.com/xcode/ide/) 
+2. [Visual Studio Code](https://code.visualstudio.com/Download)
+3. [AppCode](https://www.jetbrains.com/objc/)
 
-# Header 1
-## Header 2
-### Header 3
+Защо ми трябва да уча поредният език, ако вече знам JS?
+- Swift има своите предимства и недостатъци :) Езикът е пряко ориентиран да замени Obj-C. Тъй като е отворена технология се наблюдава използването му в реализиранеот на сървърни решения (реализират се алтернативи на Node.JS).
 
-- Bulleted
-- List
+Ако използвам Linux или Windows ще мога ли да пиша програми на Swift?
+- Да. Съще ствуват копилатори, които вървят на различните ОС-и.
 
-1. Numbered
-2. List
+Какво трябва да направя за да компилирам код, който съм написал?
+- за macOS - може да стартираш кода в [Playground](https://developer.apple.com/swift/playgrounds/)
+- за Windows - може да изпозлваш следният [компилатор](https://swiftforwindows.codeplex.com/) за да компилираш своят .swift файл 
 
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/heitara/swift-3/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+Къде мога да намеря повече информация за Swift?
+- Може да започнете от https://swift.org/.
+- [Тук](https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/index.html) може да намерите повече информаци и въведение в самият език.
