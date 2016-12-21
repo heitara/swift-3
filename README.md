@@ -5,8 +5,10 @@
 ## Постове
 
 {% for post in site.posts %}	
-    <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
-    <p><small><strong>{{ post.date | date: "%B %e, %Y" }}</strong> . {{ post.category }} . <a href="http://erjjones.github.com{{ post.url }}#disqus_thread"></a></small></p>			
+    [{{ post.title }}]({{ post.url }})
+
+
+	{ post.date | date: "%B %e, %Y" }} - {{ post.category }} [link](http://heitara.github.com/swift-3{{ post.url }}#disqus_thread)
 {% endfor %} 
 
 ### Въпроси и отговори
