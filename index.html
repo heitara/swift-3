@@ -1,6 +1,29 @@
 ---
 ---
 
+
+
+ <ul class="posts noList">
+          {% for post in paginator.posts %}
+            <li>
+                <span class="date">{{ post.date | date: '%B %d, %Y' }}</span>
+                <h3><a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></h3>
+                <p class="description">{% if post.description %}{{ post.description  | strip_html | strip_newlines | truncate: 250 }}{% else %}{{ post.content | strip_html | strip_newlines | truncate: 250 }}{% endif %}</p>
+            </li>
+          {% endfor %}
+        </ul>
+        <!-- Pagination links -->
+        <div class="pagination">
+          {% if paginator.previous_page %}
+            <a href="{{ site.url }}{{ paginator.previous_page_path }}" class="previous button__outline">Newer Posts</a>  
+          {% endif %} 
+          {% if paginator.next_page %}
+            <a href="{{ site.url }}{{ paginator.next_page_path }}" class="next button__outline">Older Posts</a>
+          {% endif %}
+        </div>
+
+
+
 ## Swift 3.0 - курс във ФМИ 
 
 Курсът по Swift ще започне през летният семестър на учебната 2016/2017. Целта на курса е да запознае учащите с основите на езика. Предимствата, разликите и разлините приложения на езика. След приключването на курса, студентеите ще могат да създават базови Swift приложения, които да могат да бъдат стартирани на различни устройства.
