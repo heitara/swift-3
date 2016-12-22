@@ -37,7 +37,7 @@
 	      {% endif %}
 		<ul>
 		  {% for post in site.posts %}	
-		      <li><a href="{{ post.url }}">{{ post.title }}</a> - <small><strong>{{ post.date | date: "%B %e, %Y" }}</strong></small></li>			
+		      <li><a href="/{{site.github.repository_name}}{{ post.url }}">{{ post.title }}</a> - <small><strong>{{ post.date | date: "%B %e, %Y" }}</strong></small></li>			
 		  {% endfor %}
 	  	</ul>
 	  </section>
