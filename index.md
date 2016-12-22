@@ -1,7 +1,37 @@
 ---
-title: Getting started with the Documentation Theme for Jekyll
-layout: home
+title: Началната страница на курса - Програмиране с Swift 3.0
 permalink: index.html
-summary: These brief instructions will help you get started quickly with the theme. The other topics in this help provide additional information and detail about working with other aspects of this theme and Jekyll.
+summary: Началната страница на курса - Програмиране с Swift 3.0
 ---
 
+## Swift 3.0 - курс във ФМИ 
+
+Курсът по Swift ще започне през летният семестър на учебната 2016/2017. Целта на курса е да запознае учащите с основите на езика. Предимствата, разликите и разлините приложения на езика. След приключването на курса, студентеите ще могат да създават базови Swift приложения, които да могат да бъдат стартирани на различни устройства.
+
+### Въпроси и отговори
+
+Ще се занимаваме ли с разработката на приложения за iOS, tvOS, macOS, watchOS?
+- Целта на курса е да представи езика, който може да бъде изпозлван за разработване на приложения за изброените платформи, но няма да изпадаме в детайли, свързани със конкретна платформа. Курсът е базов и ще последват други курсове, които ще надграждат над него.
+
+Възможно ли е да разработвам приложения на дрги операционни системи освен macОS?
+- Да. Swift 3 e отворена технология и не е ограничена само да една операционна система.
+
+Коя среда за разработка да използвам?
+- Зависи от предпочитанията ви. Ето няколко хубави примера:
+1. [xCode](https://developer.apple.com/xcode/ide/) 
+2. [Visual Studio Code](https://code.visualstudio.com/Download)
+3. [AppCode](https://www.jetbrains.com/objc/)
+
+Защо ми трябва да уча поредният език, ако вече знам JS?
+- Swift има своите предимства и недостатъци :) Езикът е пряко ориентиран да замени Obj-C. Тъй като е отворена технология се наблюдава използването му в реализиранеот на сървърни решения (реализират се алтернативи на Node.JS).
+
+Ако използвам Linux или Windows ще мога ли да пиша програми на Swift?
+- Да. Съще ствуват копилатори, които вървят на различните ОС-и.
+
+Какво трябва да направя за да компилирам код, който съм написал?
+- за macOS - може да стартираш кода в [Playground](https://developer.apple.com/swift/playgrounds/)
+- за Windows - може да изпозлваш следният [компилатор](https://swiftforwindows.codeplex.com/) за да компилираш своят .swift файл 
+
+Къде мога да намеря повече информация за Swift?
+- Може да започнете от https://swift.org/.
+- [Тук](https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/index.html) може да намерите повече информаци и въведение в самият език.
