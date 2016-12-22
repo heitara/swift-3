@@ -2,6 +2,8 @@
 title: Началната страница на курса - Програмиране с Swift 3.0
 permalink: /
 summary: Началната страница на курса - Програмиране с Swift 3.0
+posts_show: true
+posts_title: Постове
 ---
 
 ## Swift 3.0 - курс във ФМИ 
