@@ -1,6 +1,6 @@
 ---
 title: Началната страница на курса - Програмиране с Swift 3.0
-permalink: index.html
+permalink: /
 summary: Началната страница на курса - Програмиране с Swift 3.0
 ---
 
