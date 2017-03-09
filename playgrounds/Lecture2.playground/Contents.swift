@@ -87,6 +87,7 @@ type(of:pi)
 type(of:int32)
 
 
+// синтаксиса ?? се оценява, с дясната стойност на израза, само ако първата част е nil. За повече информация виж частта за Optionals
 
 //конвертиране на числата в символи
 let A = "A"
@@ -101,8 +102,28 @@ print(Character(UnicodeScalar(2 + codeOfA)!))
 print(Character(UnicodeScalar(codeOfZ)!))
 
 
+let helloWorld = "Hello 🌍!"
+//utf-8
+print(helloWorld.utf8.dropFirst(6).first ?? -1)
+print(helloWorld.utf8.dropFirst(7).first ?? -1)
+print(helloWorld.utf8.dropFirst(8).first ?? -1)
+print(helloWorld.utf8.dropFirst(9).first ?? -1)
+print(helloWorld.utf8.dropFirst(10)) //!
+
+//utf-16
+print(helloWorld.utf16.dropFirst(6).first ?? -1)
+print(helloWorld.utf16.dropFirst(7).first ?? -1)
+print(helloWorld.utf16.dropFirst(8))//!
+
+//
+print(helloWorld.unicodeScalars.dropFirst(6).first ?? -1)
+print(helloWorld.unicodeScalars.dropFirst(7))//!
 
 
+let hi = "hi"
+let how = "how are you?"
+
+let hiHowAreYou = hi + ", " + how
 
 
 //Задача 1
