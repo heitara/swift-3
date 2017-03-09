@@ -88,6 +88,20 @@ type(of:int32)
 
 
 
+//конвертиране на числата в символи
+let A = "A"
+let codeOfA = Int(("A" as UnicodeScalar).value)
+print(A.utf8.first?.toIntMax() ?? -1)
+print(A.utf16.first?.toIntMax() ?? -1)
+print(A.unicodeScalars.first?.isASCII ?? false)
+let codeOfB = codeOfA + 1
+let codeOfZ = codeOfA + 25 // 26 букви, от A до Z включително
+print(Character(UnicodeScalar(codeOfB)!))
+print(Character(UnicodeScalar(2 + codeOfA)!))
+print(Character(UnicodeScalar(codeOfZ)!))
+
+
+
 
 
 
@@ -134,7 +148,14 @@ let 🌍 = "world"
 print(🤗, 🌍)
 
 
+let numberOne: Int? = Optional.some(1)
+let nothing: Int? = Optional.none
 
+let nothing2: Int? = nil
+
+if(nothing == nil) {
+    print("Няма стойност в константата nothing.")
+}
 
 
 
