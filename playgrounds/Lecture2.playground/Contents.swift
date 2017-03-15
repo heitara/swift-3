@@ -25,7 +25,8 @@ import UIKit
 
 let zeroValue = 1
 
-var integerValue = 42
+var integerValue = 1 + 42.0
+
 
 //декларираме по няколко променливи
 var x = 0, y = 5
@@ -178,5 +179,22 @@ if(nothing == nil) {
     print("Няма стойност в константата nothing.")
 }
 
+var aX:Double = 3, bool:Bool = true
+//var aX = 3.0, bool = true
+print(aX);
+print(type(of:aX))
+print(bool);
+print(type(of:bool))
+
+var aLine:Int; var bLine:Double
+
+//декрариране на няколко променливи на един ред
+var a1:String, b1:Double, sum1: Int
+
+let s1, s2 :String
+s1 = "hello"
+a1 = "hello"
+b1 = 2
+sum1 = 2 * Int(b1)
 
 
