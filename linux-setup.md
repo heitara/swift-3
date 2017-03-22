@@ -4,7 +4,7 @@
 
 Стъпките, които следват са извършени на Ubuntu 14.04, но според Apple, 16.04 също е OK.
 
-## 1 Да си свалим Swift
+## 1. Да си свалим Swift
 
 * [Swift 3.02 за Ubuntu 14.04](https://swift.org/builds/swift-3.0.2-release/ubuntu1404/swift-3.0.2-RELEASE/swift-3.0.2-RELEASE-ubuntu14.04.tar.gz)
 * [Swift 3.02 за Ubuntu 16.04](https://swift.org/builds/swift-3.0.2-release/ubuntu1604/swift-3.0.2-RELEASE/swift-3.0.2-RELEASE-ubuntu16.04.tar.gz)
