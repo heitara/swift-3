@@ -23,9 +23,13 @@ import UIKit
  реда
  */
 
-let zeroValue = 1
+let zeroValue:Int
 
-var integerValue = 1 + 42.0
+var `_integerValue`:Int //int Integer
+
+zeroValue = 6 ;
+var integerValue = 75;
+
 
 
 //декларираме по няколко променливи
@@ -41,8 +45,8 @@ let a = 1, b = 3
  По-прегледно е да декларираме по една променлива или константа на ред, понеже кодът е по-четлив. Когато сме в Playground виждаме и съответната стойност, която стои в паметта.
  */
 
-
 let `let` = 15
+let `if` = 15
 var `var` = 12
 
 
@@ -92,6 +96,8 @@ type(of:int32)
 
 //конвертиране на числата в символи
 let A = "A"
+var newString = A + "Hello"
+newString = newString + " World!"
 let codeOfA = Int(("A" as UnicodeScalar).value)
 print(A.utf8.first?.toIntMax() ?? -1)
 print(A.utf16.first?.toIntMax() ?? -1)
@@ -100,8 +106,11 @@ let codeOfB = codeOfA + 1
 let codeOfZ = codeOfA + 25 // 26 букви, от A до Z включително
 print(Character(UnicodeScalar(codeOfB)!))
 print(Character(UnicodeScalar(2 + codeOfA)!))
-print(Character(UnicodeScalar(codeOfZ)!))
+print(Character(UnicodeScalar(codeOfZ+7)!))
 
+let globe = "🌍"
+let hw2 = "Hello \(globe)"
+print("Здравей \(globe)")
 
 let helloWorld = "Hello 🌍!"
 //utf-8
@@ -117,7 +126,7 @@ print(helloWorld.utf16.dropFirst(7).first ?? -1)
 print(helloWorld.utf16.dropFirst(8))//!
 
 //
-print(helloWorld.unicodeScalars.dropFirst(6).first ?? -1)
+print(helloWorld.unicodeScalars.dropFirst(6).first)
 print(helloWorld.unicodeScalars.dropFirst(7))//!
 
 
@@ -173,9 +182,20 @@ print(🤗, 🌍)
 let numberOne: Int? = Optional.some(1)
 let nothing: Int? = Optional.none
 
-let nothing2: Int? = nil
+let nothing2: Int? = 5
 
-if(nothing == nil) {
+let sss:String? = "SSS"
+
+//if (sss != nil) {
+//    sss.action()
+//}
+
+//sss?.action()
+
+
+print(nothing2!)
+
+if(nothing2 == nil) {
     print("Няма стойност в константата nothing.")
 }
 
@@ -196,5 +216,27 @@ s1 = "hello"
 a1 = "hello"
 b1 = 2
 sum1 = 2 * Int(b1)
+
+
+var fiveOrNothing: Int? = 5
+
+if let five = fiveOrNothing {
+    print(five);
+} else {
+    print("There is no value!");
+}
+
+fiveOrNothing = nil
+
+if let five = fiveOrNothing {
+    print(five);
+} else {
+    print("There is no value!");
+}
+
+
+
+
+
 
 
