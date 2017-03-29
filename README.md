@@ -22,7 +22,7 @@
 
 Коя среда за разработка да използвам?
 - Зависи от предпочитанията ви. Ето няколко хубави примера:
-1. [xCode](https://developer.apple.com/xcode/ide/) 
+1. [xCode](https://developer.apple.com/xcode/ide/)
 2. [Visual Studio Code](https://code.visualstudio.com/Download)
 3. [AppCode](https://www.jetbrains.com/objc/)
 
@@ -30,11 +30,12 @@
 - Swift има своите предимства и недостатъци :) Езикът е пряко ориентиран да замени Obj-C. Тъй като е отворена технология се наблюдава използването му в реализиранеот на сървърни решения (реализират се алтернативи на Node.JS).
 
 Ако използвам Linux или Windows ще мога ли да пиша програми на Swift?
-- Да. Съще ствуват компилатори, които вървят на различните ОС-и.
+- Да. Съществуват компилатори, които вървят на различните ОС-и.
 
 Какво трябва да направя за да компилирам код, който съм написал?
 - за macOS - може да стартираш кода в [Playground](https://developer.apple.com/swift/playgrounds/)
-- за Windows - може да изпозлваш следният [компилатор](https://swiftforwindows.codeplex.com/) за да компилираш своят .swift файл 
+- за Windows - може да изпозлваш следният [компилатор](https://swiftforwindows.codeplex.com/) за да компилираш своят .swift файл
+- за Linux (Ubuntu 14.04) - инструкции [тук](linux-setup.md)
 
 Къде мога да намеря повече информация за Swift?
 - Може да започнете от https://swift.org/.
