@@ -8,7 +8,7 @@
 
 	Пример: 
 	
-		ABC => [ABC, ACB, CAB, CBA, CAB, BAC, BCA] 
+		ABC => [ABC, ACB, BAC, BCA, CAB, CBA] 
 		
 	_Наредбата на пермутациите не е от значение._
 
