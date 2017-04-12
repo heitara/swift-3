@@ -185,14 +185,14 @@ let s = seven()
 print("Това е числото \(s).")
 
 /*
-// невалидна функция
+// невалидна функция, поради дублиране на имената
 func functionName(argumentName variableName:String, argumentName variableName2:Int) -> String {
     let reurnedValue = variableName + " was passed"
     return reurnedValue
 }
  */
 
-//как да не позлваме името на аргумент
+//как да не позлваме името (label) на аргумент
 func concatenateStrings(_ s1:String, _ s2:String) -> String {
     return s1 + s2
 }
