@@ -43,22 +43,22 @@ struct Merchandise {
     var pricePerUnit: Double
     var isAvailable: Bool
     
-    init() {
-        self.name = "Noname"
-        self.pricePerUnit = 0
-        self.isAvailable = false
-    }
+//    init() {
+//        self.name = "Noname"
+//        self.pricePerUnit = 0
+//        self.isAvailable = false
+//    }
 
-    init(newName name: String, pricePerUnit: Double = 200, isAvailable:Bool ) {
+    init(name: String, pricePerUnit: Double, isAvailable:Bool ) {
         self.name = name
         self.pricePerUnit = pricePerUnit
         self.isAvailable = isAvailable
     }
 }
 
-var phone = Merchandise(newName:"Nokia", pricePerUnit:123, isAvailable:false)
+var phone = Merchandise(name:"Nokia", pricePerUnit:123, isAvailable:false)
 //конструктор без параметри
-var phone2:Merchandise = Merchandise()
+var phone2:Merchandise = Merchandise(name: "no name", pricePerUnit: 0, isAvailable: false)
 
 print(phone2.name + " hello")
 
@@ -71,8 +71,7 @@ print(phone.name)
 
 
 
-var newPhone:Merchandise = Merchandise()
-
+var newPhone:Merchandise = Merchandise(name: "no name", pricePerUnit: 0, isAvailable: false)
 func pritnInfoFor(merchandise:Merchandise) {
     print("Product : \(merchandise.name) - \(merchandise.pricePerUnit) - \(merchandise.isAvailable ? "available" : "unavailable")")
 }
@@ -226,7 +225,7 @@ extension Merchandise3 {
 }
 
 //Пример за константно свързване (константа) когато типът има променливи пропъртита
-let g1 = Merchandise()
+let g1 = Merchandise(name: "no name", pricePerUnit: 0, isAvailable: false)
 //g1.name = "New name" //note: change 'let' to 'var' to make it mutable
 
 print("----computed properties----")
