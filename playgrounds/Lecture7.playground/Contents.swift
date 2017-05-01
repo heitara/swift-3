@@ -25,6 +25,7 @@ import UIKit
 //: # Лекция 7: Протоколи (Класове и Структури)
 //: ## курс: Увод в прогрмаирането със Swift
 
+//: Наследяване - преговор
 //: Предефиниране (overriding)
 
 //: Достъп до базовите методи, пропъртита и subscript-s, става чрез ```super```
@@ -43,7 +44,7 @@ import UIKit
 
 //: наследяване на инициализаторите инициализатори
 
-//: ```require``` инициализатори
+//: ```required``` инициализатори
 
 //: init? инициализатори
 
@@ -53,6 +54,10 @@ struct StructBook {
     var pageCount = 0
     var title = "no title"
     var publishDate:Date? = nil
+    
+    init(title:String) {
+        self.title = title
+    }
 }
 
 class Book {
@@ -106,7 +111,7 @@ extension Book {
 
 var book100 = Book(pages: 100)
 
-var book2 = StructBook(pageCount: 1000, title: "Swift 3", publishDate: nil)
+//var book2 = StructBook(pageCount: 1000, title: "Swift 3", publishDate: nil)
 
 
 //var doc = TechnicalBook(
@@ -139,17 +144,33 @@ protocol TechnicalDocumented {
 
 protocol Printable {
     var description: String { get }
+    static var version: String { get set}
+    
+    
+    init()
+    init(a:Int, b:Int)
 }
 
-
-
- 
-
-extension Int:Printable {
+extension Printable {
+    //default version
     var description: String {
-        return "седем"
+        return "No descriprion."
+    }
+    
+    //default version
+    static var version: String {
+        return "v. 1.0"
     }
 }
+
+
+
+//extension Int:Printable {
+//    var description: String {
+//        return "седем"
+//    }
+//    
+//}
 
 //var i = 7
 //print(i.description)
@@ -158,11 +179,23 @@ extension Int:Printable {
 
 class Machine: Printable {
     var powerConsumption = 0
+    var name = "Missing name"
     //имаме неявен конструкту по подразбиране
     
 //    var description: String {
 //        return "Machine"
 //    }
+    
+    static var version: String = "v. 2.0"
+    
+    required init() {
+        
+    }
+    
+    required init(a:Int, b:Int) {
+        print("Machine")
+    }
+    
 }
 
 var m = Machine()
@@ -186,7 +219,7 @@ class WashingMachine : Machine, TechnicalDocumented {
     }
     
     
-    override init() {
+    required init() {
         technicalDocumentation = TechnicalBook()
         super.init()
     }
@@ -195,6 +228,13 @@ class WashingMachine : Machine, TechnicalDocumented {
         technicalDocumentation = documentation
         super.init()
     }
+    
+    required init(a:Int, b:Int) {
+        technicalDocumentation = TechnicalBook()
+        print("W.Machine")
+        super.init()
+    }
+
     
 //    override var description: String {
 //        
@@ -206,41 +246,21 @@ class WashingMachine : Machine, TechnicalDocumented {
 
 
 
-
-//: ### Пропъртита
-//: Get
-//:
-//: Get & Set
-
-//: ### Методи
-//: - към инстанцията (методи към обект)
-//: - към типа (статични методи)
-//примери:
+protocol PersonalComputer: class {
+    func getRamSize() -> Int
+    /**
+     * Convert X bytes to "KB" or "MB" or "GB" or "TB"
+     **/
+    static func convert(bytes: Int, to:String) -> Double
+}
 
 
-//: ### Инициализираши методи
-//: - Note:
-//: Пишем ги по стандартния начин, без самата имплементация.
-
-//: Когато ги имплементираме добавяме ключовата дума ```require```
-
-//пример:
-
-
-
-//: ### Мутиращи методи
-
-
-
-
-
-
-
-
-
-
-
-
+class MacBookPro : PersonalComputer {
+    func getRamSize() -> Int {
+        return 1024
+    }
+    static func convert(bytes: Int, to:String) -> Double { return 0 }
+}
 
 
 
