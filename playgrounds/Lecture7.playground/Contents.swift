@@ -58,6 +58,14 @@ struct StructBook {
     init(title:String) {
         self.title = title
     }
+    
+    
+}
+
+extension StructBook {
+    init() {
+        self.init(title: "No title")
+    }
 }
 
 class Book {
