@@ -60,13 +60,6 @@ if predicate(two) {
     print("\(two) удволетворява условието!")
 }
 
-
-//: Да се даде пример за функция, която взема друга функция като параметър.
-
-
-//: Да се даде пример за функция, която взема друга функция като параметър.
-
-
 //: Да се даде пример за функция, която взема друга функция като параметър.
 func fancyPrint(name: String) {
     //TODO:
@@ -79,7 +72,7 @@ func fancyPrintNew(name: String)   {
     print("!@#!@#@!#@!#!@#!@!@#!@#@!#@!#!@#!@")
 }
 
-var myPrint: (String) -> Void = fancyPrintNew
+let myPrint: (String) -> Void = fancyPrintNew
 
 let firstNames = ["Иван", "Гошо", "Мишо"]
 
@@ -110,7 +103,7 @@ func createVeryFancyPrintFunction() -> (String)-> Void {
 //: Да се даде пример за функция, която връща функция като параметър и взема поне един параметър - функция.
 
 //TODO:
-//: ### Nested(Вместени) функции?
+//: ### Nested(Вместени) функции
 //: - Note:
 //: До сега сме се запознали с функции, които са глобални. (Методите, които са част от класовете са по-различен вид функции, които познаваме.)
 
@@ -143,13 +136,13 @@ globalFunc()
 //: В Swift, клоужърите (closure) са:
 //: * глобалните функции с имена, които вече познаваме
 //: * вместените функции са клоужъри, които имат видимост до променливите в функцията, която ги съдържа (процеса по запомняне/прихващане на променливите се нарича capturing)
-//: * клоужър израз - без име, записан по специфичен начин, прихващаш (capture) стойности от прилежащия му контекст
+//: * клоужър израз - без име, записан по специфичен начин, прихващащ (capture) стойности от прилежащия му контекст
 
 
 
 //: Клоужърите имат прост и компактен синтаксис. Ще го видим в различни примери.
 //: Техният механизъм позволява определянето на типовете на параметрите автоматично. Също и на връщания резултат. Ако имаме клоужър само с един израз, тогава не е нужно да изпозлваме `return` за да обявим, че връщаме резултат. 
-//: Клоужърите имат съхратен вариант и в него можем лесно да се обръщаме към параметрите.
+//: Клоужърите имат съкратен вариант и в него можем лесно да се обръщаме към параметрите.
 
 //Пример:
 
@@ -182,7 +175,7 @@ trailingClosure(i: 1, predicate: { (a) in
     return a % 2 == 0
 })
 
-//клоужъра е последен параметър, затова се подава, като часто от функцията
+//клоужъра е последен параметър, затова се подава като блок код след извикване на функцията
 trailingClosure(i: 4) { (a) in
     return a % 2 == 0
 }
@@ -230,7 +223,6 @@ var next = createGen(start: 0) {
     $0 + 2
 }
 
-print(next()) //0
 print(next()) //2
 print(next()) //4
 print(next()) //6
@@ -272,24 +264,52 @@ func funcAutoclosure(pred: @autoclosure () -> Bool) {
     if pred() {
         print("It's true")
     } else {
-        
+        print("It's НОТ true")
     }
 }
 
 funcAutoclosure(pred: 11 > 12)
 funcAutoclosure(pred: { () -> Bool in return 2 > 1}())
 
-func closureExample(function: (Int, Int) -> Bool) {
-    let a = 1
-    let b = 52
-    if function(a, b) {
-        print("Returned result is true")
-    } else {
-        print("Returned result is !true")
-    }
+
+// допълнителен пример за @autoclosure
+
+func funcAutoclosureComplex(pred: @autoclosure () -> ()) {
+    print("body of \(#function)")
 }
 
-closureExample() { (a:Int, b:Int) in a > b}
+
+func funcAutoclosureComplexVoid(pred:()) {
+    print("body of \(#function)")
+}
+
+funcAutoclosureComplex(pred: print("the function is wrapped in a closure and it's never called."))
+
+funcAutoclosureComplexVoid(pred: print("the function print() is called"))
+
+//: - Note:
+//: () и Void са еквивалетни записа за липсата на резултат
+var predicates:[()->Void] = []
+func funcEscapeAutoclosure(pred:@escaping @autoclosure () -> ()) {
+    predicates.append(pred)
+}
+
+funcEscapeAutoclosure(pred: print("body 2"))
+funcEscapeAutoclosure(pred: print("body 3"))
+funcEscapeAutoclosure(pred: print("body 1"))
+
+//можем да активираме autoclosure-ите в прозиволен ред
+for i in 1 ... 5 {
+    predicates[0]()
+}
+
+for p in predicates {
+    p() //тук () е запис за извикване/активиране на функция
+}
+
+
+
+
 
 //: # За любознателните:
 //: ### Ето какво значение има ако дадена функция е част от протокол, когато боравим с протоколи.
