@@ -1,3 +1,9 @@
 theme: jekyll-theme-modernist
 # Google services
 google_analytics: UA-96480142-1
+
+defaults:
+  - scope:
+      path: "_posts/"
+    values:
+      image: true
