@@ -4,6 +4,6 @@ google_analytics: UA-96480142-1
 
 defaults:
   - scope:
-      path: "_posts/"
+      path: "assets"
     values:
       image: true
